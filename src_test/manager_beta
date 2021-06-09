@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <link rel="stylesheet" href="media.css">
+    <title>Reproductor de musica</title>
+</head>
+<body class="bg-dark">
+    <div class="container my-3 d-none d-sm-block">
+        <h1 class="text-danger">Manejador Streaming de Muisca</h1>
+        <hr class="bg-light">
+    </div>
+    <div class="container my-3">
+        <div class="row">
+            <div class="col-md-5 form-group" id="myScrollspy">
+                <div id="player" class="card container">
+                    <img class="card-img mt-3" src="" alt="" id="imagen">
+                    <div class="cancionInfo">
+                        <h4 class="card-text" id="titulo"></h4>
+                        <p class="card-text" id="artista"></p>
+                    </div>
+                    <div id="pista">
+                        <progress class="progress" id="progress" value="0" max="1"></progress>
+                        <div id="handler"></div>
+                    </div>
+                    <div class="text-center">
+                        <small id="start-time"></small>
+                        <button class="btn btn-link text-danger">
+                            <h1><i id="prev" class="fas fa-step-backward" onclick="prevTrack()"></i></h1>
+                        </button>
+                        <button class="btn btn-link text-danger">
+                            <h1><i id="play" class="far fa-play-circle" onclick="playTrack()"></i></h1>
+                        </button>
+                        <button class="btn btn-link text-danger">
+                            <h1><i id="next" class="fas fa-step-forward" onclick="nextTrack()"></i></h1>
+                        </button>
+                        <small id="end-time"></small>
+                    </div>
+          
+                </div>
+            </div>
+            <div class="col-md-7" data-spy="scroll" data-target="#navbar-example3" data-offset="0">
+                <ul class="list-group" id="contenido">
+                    
+                </ul>
+            </div>
+        </div>
+        
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="media.js"></script>
+</body>
+</html>

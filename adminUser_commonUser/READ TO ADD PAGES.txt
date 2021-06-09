@@ -1,0 +1,4 @@
+Para implementar las páginans solo es necesario agregar los archivos en las 
+carpetas que tienen el mismo nombre que el src principal del proyecto.
+Luego de eso, se realiza un yarn instal para luego hacer yarn start y poder
+ver cada página. 

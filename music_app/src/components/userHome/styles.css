@@ -1,0 +1,30 @@
+.user-home{ 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: auto;
+    padding: 1em;
+}
+
+.description{
+    align-items: center;
+    justify-content: center;
+    margin: 2em;
+    background-color: white;
+    border-radius: 0.5rem;
+    box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.5);
+    padding: 2em;
+}
+
+.hometitle{
+    align-items: center;
+    justify-content: center;
+    margin: 2em;
+}
+
+img{
+    width: auto;
+    height: 112px;
+}

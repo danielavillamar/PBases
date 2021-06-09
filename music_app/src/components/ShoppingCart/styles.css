@@ -1,0 +1,82 @@
+.shopping-cart-main-container { 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.shopping-cart-main-container .receipt-container {
+  box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.5);
+  border-radius: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 75rem;
+  margin: 5rem;
+  padding: 2rem;
+}
+
+.receipt-container hr {
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.receipt-container .receipt-headers {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.receipt-headers .receipt-description {
+  width: 50%;
+}
+.receipt-headers .receipt-price {
+  width: 50%;
+}
+
+.rows-container {
+  width: 100%;
+}
+
+.shopping-cart-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 3rem;
+  width: 15rem;
+  border-radius: 2rem;
+  background-color: #519e8a;
+  color: #fff;
+}
+
+.shopping-cart-btn:hover {
+  cursor: pointer;
+  scale: 1.1;
+}
+
+.shopping-cart-btn:active {
+  background-color: #fff;
+  border: 0.5px solid #519e8a;
+  color: black;
+}
+
+.shopping-cart-total {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  margin: 2rem;
+  margin-left: 0;
+}
+
+.shopping-cart-total .total {
+  width: 50%;
+}
+.shopping-cart-total .amount {
+  width: 50%;
+}
+
+.pdf-container {
+  width: 100%;
+  padding: 2rem;
+}

@@ -1,0 +1,21 @@
+.admin-home-wrapper{ 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: auto;
+    padding: 1em;
+}
+
+.description{
+    margin: 2em;
+    background-color: white;
+    border-radius: 0.5rem;
+    box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.5);
+    padding: 2em;
+}
+
+h2, h3, h4 {
+    margin: 0em;
+}

@@ -1,0 +1,43 @@
+.binnacle-main-container { 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.binnacle-main-container .binnacle-container {
+  margin: 5rem;
+  box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.5);
+  border-radius: 2rem;
+  display: flex;
+  flex-direction: column;
+  width: 75rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.binnacle-titles {
+  margin: 2rem;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-bottom: 1rem;
+  border-bottom: 0.2px solid rgba(0, 0, 0, 0.589);
+}
+
+.binnacle-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20%;
+}
+
+.binnacle-rows {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 2rem;
+  margin-top: 0;
+  width: 100%;
+}

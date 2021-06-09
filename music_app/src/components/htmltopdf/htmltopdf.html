@@ -1,0 +1,100 @@
+<html>
+
+<head>
+    <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
+        crossorigin="anonymous"></script>
+
+    <style>
+        body {
+            background: #20262E;
+            padding: 20px;
+            font-family: Helvetica;
+        }
+
+        #banner-message {
+            background: #fff;
+            border-radius: 4px;
+            padding: 20px;
+            font-size: 25px;
+            text-align: center;
+            transition: all 0.2s;
+            margin: 0 auto;
+            width: 500px;
+        }
+
+        button {
+            background: #0084ff;
+            border: none;
+            border-radius: 5px;
+            padding: 8px 14px;
+            font-size: 15px;
+            color: #fff;
+        }
+
+        #banner-message.alt {
+            background: #0084ff;
+            color: #fff;
+            margin-top: 40px;
+            width: 200px;
+        }
+
+        #banner-message.alt button {
+            background: #fff;
+            color: #000;
+        }
+    </style>
+
+    <script>
+        function printHtmlToPdf(html) {
+            var endpoint = 'https://v2018.api2pdf.com/chrome/html';
+            var apikey = '36d76f48-96c2-4dbc-9e2a-4197f04b2819'; 
+            var payload = {
+                "html": html,
+                "inlinePdf": false
+            };
+            $.ajax({
+                url: endpoint,
+                method: "POST",
+                dataType: "json",
+                crossDomain: true,
+                contentType: "application/json; charset=utf-8",
+                data: JSON.stringify(payload),
+                cache: false,
+                beforeSend: function (xhr) {
+                   
+                    xhr.setRequestHeader("Authorization", apikey);                   
+                },
+                success: function (data) {
+                    console.log(data.pdf); 
+                    document.getElementById('my_iframe').src = data.pdf;
+                },
+                error: function (jqXHR, textStatus, errorThrown) {
+
+                }
+            });
+        }
+
+    </script>
+</head>
+
+<body>
+    <div id="banner-message">
+        <p>Pureba de descarga</p>
+        <button>Print to PDF</button>
+    </div>
+    <iframe id="my_iframe" style="display:none;"></iframe>
+</body> 
+
+<script>
+    // find elements
+    var banner = $("#banner-message")
+    var button = $("button")
+
+    // handle click and add class
+    button.on("click", function () {
+        var htmlToPrint = '<p>Music App (prueba para generar un PDF)</p>';
+        printHtmlToPdf(htmlToPrint);
+    })
+</script>
+
+</html>

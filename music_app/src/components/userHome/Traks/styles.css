@@ -1,0 +1,26 @@
+.info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.info .add-shopping-cart { 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 2rem;
+  padding: 1rem;
+  margin: 0.5rem;
+}
+
+.add-shopping-cart:hover {
+  color: #9fc1ff;
+  background-color: #0059ff;
+  transition: 0.3s;
+}
+
+.add-shopping-cart:active {
+  color: #0059ff;
+  background-color: #9fc1ff;
+  transition: 0.02s;
+}

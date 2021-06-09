@@ -1,0 +1,29 @@
+/* Colors */ 
+/*
+dark blue: #476A6F
+light blue: #258EA6
+dark green: #519E8A
+medium green: #7EB09B
+light green: #A3C4BC
+*/
+
+.stats-wrapper{
+    background-color: #A3C4BC;
+    box-sizing: border-box;
+    border-radius: 1rem;
+    box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    padding-left: 75px;
+    padding-bottom: 75px;
+    padding-top: 75px;
+    padding-right: 75px;
+}
+
+.graph-wrapper{
+    margin: 2em;
+    background-color: white;
+    border-radius: 0.5rem;
+    box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.5);
+    padding: 2em;
+}

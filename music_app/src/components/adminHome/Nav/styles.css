@@ -1,0 +1,79 @@
+/* Colors */
+/*
+dark blue: #476A6F
+light blue: #258EA6
+dark green: #519E8A
+medium green: #7EB09B
+light green: #A3C4BC
+*/ 
+
+nav {
+  box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 10vh;
+  background: #476a6f;
+  color: white;
+}
+
+.nav-links {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+}
+
+li {
+  padding: 1em;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+.box {
+  margin-top: 3em;
+  transform: translate(-50%, -50%);
+  background: #2e3e50;
+  height: 40px;
+  border-radius: 40px;
+  padding: 10px;
+}
+
+.search-text {
+  border: none;
+  background: none;
+  outline: none;
+  float: left;
+  padding: 0;
+  font-size: 16px;
+  color: white;
+  line-height: 40px;
+  width: 240px;
+  transition: 0.5s;
+}
+
+.box:hover > .search-text {
+  width: 240px;
+}
+
+.search-btn {
+  color: black;
+  float: right;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-links svg {
+  margin: 2px;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}

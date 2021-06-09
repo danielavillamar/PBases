@@ -1,0 +1,50 @@
+1. Los artistas con más álbumes publicados (mostrar cinco resultados):
+
+SELECT artist1.name, count(artist1.name)
+from album album1 join artist artist1 on album1.artistid = artist1.artistid
+group by artist1.name
+order by count(artist1.name) desc LIMIT 5
+
+2. Géneros con más canciones (mostrar cinco resultados):
+
+SELECT genre1.name, count(genre1.name)
+from genre genre1 join track track1 on genre1.genreid = track1.genreid
+group by genre1.name
+order by count(genre1.name) desc LIMIT 5
+
+3. Total de duración de cada playlist:
+
+SELECT playlist.playlistid, playlist.name, SUM(track.milliseconds/1000) AS Cuenta
+FROM playlist
+LEFT JOIN playlisttrack ON playlisttrack.playlistid = playlist.playlistid
+LEFT JOIN track ON track.trackid = playlisttrack.trackid
+WHERE track.milliseconds IS NOT NULL
+GROUP BY playlist.playlistid 
+ORDER BY Cuenta desc
+
+4. Canciones de mayor duración con la información de sus artistas (mostrar cinco resultados):
+
+SELECT artist1.name, track1.name, (track1.milliseconds/1000)
+from album album1 join artist artist1 on album1.artistid = artist1.artistid join track track1 on track1.albumid = album1.albumid 
+WHERE track1.mediatypeid = 2 OR track1.mediatypeid = 1 OR track1.mediatypeid = 4 OR track1.mediatypeid = 5 
+order by (track1.milliseconds) desc LIMIT 5
+
+5. 
+
+6.Promedio de duración de canciones por género:
+
+SELECT genre1.name, AVG((track1.milliseconds/1000)) AS AveragePerGenre
+FROM genre genre1 join track track1 on genre1.genreid = track1.genreid
+WHERE track1.mediatypeid = 2  OR track1.mediatypeid = 4 OR track1.mediatypeid = 5 OR track1.mediatypeid = 1
+GROUP BY genre1.name
+ORDER BY AveragePerGenre DESC
+
+7. Cantidad de artistas diferentes por playlist:
+
+SELECT playlist1.name, count(artist1.artistid)
+from playlist playlist1 join playlisttrack playlisttrack1 on playlist1.playlistid = playlisttrack1.playlistid join track track1 on track1.trackid = playlisttrack1.trackid join album album1 on album1.albumid = track1.albumid join artist artist1 on artist1.artistid = album1.artistid
+group by playlist1.name
+order by count(artist1.name) desc 
+
+8. Los artistas con más diversidad de géneros musicales (mostrar cinco resultados):
+

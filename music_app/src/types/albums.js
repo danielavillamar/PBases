@@ -1,0 +1,2 @@
+export const ALBUMS_LOADED = 'ALBUMS_LOADED'; 
+export const LOGOUT_SUCCESS = 'LOGOUT_SUCCESS';
